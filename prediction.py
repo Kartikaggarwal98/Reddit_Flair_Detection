@@ -36,7 +36,6 @@ def predict(url):
 	"flair":str(post.link_flair_text),
 	"comms_num":str(post.num_comments),
 	}
-	print (posts)
 #  Only top ten comments and their authors are considered. 
 	post.comments.replace_more(limit=None)
 	comment = str()
@@ -57,6 +56,6 @@ def predict(url):
 	# load the model from disk
 	loaded_model = pickle.load(open(filename, 'rb'))
 	prediction=loaded_model.predict([X_test])
-	print ('-----',prediction, idx_flair[prediction[0]])
+	# print ('-----',prediction, idx_flair[prediction[0]])
 	return idx_flair[prediction[0]], str(posts['flair'])
 
