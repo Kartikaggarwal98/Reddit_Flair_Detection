@@ -1,7 +1,7 @@
-sklearn
-fastai
-matplotlib
-seaborn
-jupyter
+sklearn==0.0
 argparse==1.4.0
 praw==6.4.0
+Flask==1.1.2
+gunicorn==20.0.4
+Jinja2==2.11.1
+numpy==1.18.2
