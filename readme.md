@@ -35,10 +35,10 @@ A web app to predict the flair for a reddit post using NLP based algorithms. The
 # Online Demo
 The flare predictor can be accessed at [Link](https://flairr.herokuapp.com/). Just enter the url of any post from [r/india](https://www.reddit.com/r/india/) and click on predict.
 
-![alt text][https://github.com/Kartikaggarwal98/MIDAS_InternTask/tree/master/static/images/img1.png]
+![alt text](https://github.com/Kartikaggarwal98/MIDAS_InternTask/tree/master/static/images/img1.png)
 
 The resulting page will show the predicted flair of the post along with the actual flair from the page.
-![alt text][https://github.com/Kartikaggarwal98/MIDAS_InternTask/tree/master/static/images/img1.png]
+![alt text](https://github.com/Kartikaggarwal98/MIDAS_InternTask/tree/master/static/images/img1.png)
 
 
 
