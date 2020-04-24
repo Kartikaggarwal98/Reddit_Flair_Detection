@@ -13,6 +13,7 @@ A web application to predict the flair for a reddit post using NLP based algorit
 
 
 # Directory Structure
+```
 ├── EDA
 |   ├── EDA.ipynb
 ├── auto_test
@@ -30,7 +31,7 @@ A web application to predict the flair for a reddit post using NLP based algorit
 ├── get_data.py
 ├── prediction.py
 ├── requirements.txt
-
+```
 
 # Online Demo
 The flare predictor can be accessed at [Link](https://flairr.herokuapp.com/). Just enter the url of any post from [r/india](https://www.reddit.com/r/india/) and click on predict.
