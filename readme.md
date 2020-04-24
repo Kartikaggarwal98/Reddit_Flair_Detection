@@ -1,15 +1,14 @@
 # Reddit Flair Detector
-A web application to predict the flair for a reddit post using NLP based algorithms. The website can be accessed at [Flair Detector](https://flairr.herokuapp.com/).
+A web app to predict the flair for a reddit post using NLP based algorithms. The website can be accessed at [Flair Detector](https://flairr.herokuapp.com/).
 
 | Section | Description |
-|-|-|
+|:-|:-:|
 | [Directory Structure](#directory) | View the file structure of the repository |
 | [Online demo](#demo) | Experiment with model's prediction capabilities |
 | [Installation](#installation) | How to install the package |
 | [Model Architectures](#model-architectures) | Architectures (with pretrained weights) |
 | [Data](#data) | Collection and cleaning of data |
 | [Performance](Performance) | Classification performance of different models used |
-
 
 
 # Directory Structure
