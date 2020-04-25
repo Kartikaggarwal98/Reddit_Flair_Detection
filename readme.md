@@ -5,6 +5,7 @@ A web app to predict the flair for a reddit post using NLP based algorithms. The
 |:-|:-:|
 | [Directory Structure](#directory) | View the file structure of the repository |
 | [Online demo](#demo) | Experiment with model's prediction capabilities |
+| [Automated Testing](#auto) | Automatically predict the flairs from collection of URLs |
 | [Installation](#installation) | How to install the package |
 | [Model Architectures](#model-architectures) | Architectures (with pretrained weights) |
 | [Data](#data) | Collection and cleaning of data |
@@ -13,16 +14,16 @@ A web app to predict the flair for a reddit post using NLP based algorithms. The
 
 # Directory Structure
 ```
-├── EDA
-|   ├── EDA.ipynb
-├── auto_test
-|   ├── automated_testing.py
-|   ├── autotest_file.txt
+
 ├── notebooks
+|   ├── EDA_cleaned.ipynb
 |   ├── base_models.ipynb
 |   ├── bert+fastai.ipynb
 |   ├── lstm_keras.ipynb
 |   ├── ulmfit.ipynb
+├── auto_test
+|   ├── automated_testing.py
+|   ├── autotest_file.txt
 ├── templates
 |   ├── index.html
 |   ├── predict.html
@@ -44,6 +45,16 @@ The resulting page will show the predicted flair of the post along with the actu
 
 The models have only been trained for the following flairs: `AskIndia, Business/Finance, Food, Non-Political, Photography, Policy/Economy, Politics, Science/Technology,Sports`.
 Hence, any posts apart from these flairs will not give the accurate prediction.
+
+# Automated Testing
+In order to predict flairs from multiple urls, instead of entering the url repeatedly on the page, you can use automated testing endpoint of the web app. 
+Simply send a post request to `https://flairr.herokuapp.com/automated_testing`. In python you can use `requests` library to do so. (See [automated_testing.py](https://github.com/Kartikaggarwal98/Reddit_Flair_Detection/tree/master/auto_test/automated_testing.py))
+
+Also, if you have cloned the repository, you can directly put a text file with line separated urls named `file.txt` in auto_test folder and then run:
+
+` python auto_test/automated_testing.py`
+
+You will get a json response with urls as keys and predicted flairs as values.
 
 # Installation
 This repo is tested on Python 3.6+ on Unix/Linux System. You should use this repository in a virtual environment. If you're unfamiliar with Python virtual environments, check out the [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
@@ -74,6 +85,8 @@ The data used for training the models was collected from the subreddit [r/india]
 The details about the data collection can be found in [get_data.ipynb](https://github.com/Kartikaggarwal98/Reddit_Flair_Detection/get_data.ipynb). The following attributes for each post were taken: *title, score, id, body, author, flair, url, number of comments, creation date and top 10 comments*.
 Further the data was saved in a csv file using pandas library.
 
+After collecting the data, Exploratory Data Analysis (EDA) was done in  order to obtain a clear understanding about the data. The complete analysis has been shown in [EDA_cleaned.ipynb]((https://github.com/Kartikaggarwal98/Reddit_Flair_Detection/notebooks/EDA_cleaned.ipynb)).
+ 
 # Performance
 
 The performance on all the models was measured using weighted f1 metric as accuracy can be a misleading metric in unbalanced datasets. All models were trained using 3 types of text features:
