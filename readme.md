@@ -13,6 +13,7 @@ A web app to predict the flair for a reddit post using NLP based algorithms. The
 
 
 # Directory Structure
+
 ```
 
 ├── notebooks
@@ -33,7 +34,7 @@ A web app to predict the flair for a reddit post using NLP based algorithms. The
 ├── requirements.txt
 ```
 
-# Online Demo
+# Online
 The flare predictor can be accessed at [Link](https://flairr.herokuapp.com/). Just enter the url of any post from [r/india](https://www.reddit.com/r/india/) and click on predict.
 
 ![alt text](https://imgur.com/DOeJNcV)
@@ -47,12 +48,13 @@ The models have only been trained for the following flairs: `AskIndia, Business/
 Hence, any posts apart from these flairs will not give the accurate prediction.
 
 # Automated Testing
+
 In order to predict flairs from multiple urls, instead of entering the url repeatedly on the page, you can use automated testing endpoint of the web app. 
 Simply send a post request to `https://flairr.herokuapp.com/automated_testing`. In python you can use `requests` library to do so. (See [automated_testing.py](https://github.com/Kartikaggarwal98/Reddit_Flair_Detection/tree/master/auto_test/automated_testing.py))
 
 Also, if you have cloned the repository, you can directly put a text file with line separated urls named `file.txt` in auto_test folder and then run:
 
-` python auto_test/automated_testing.py`
+`python auto_test/automated_testing.py`
 
 You will get a json response with urls as keys and predicted flairs as values.
 
