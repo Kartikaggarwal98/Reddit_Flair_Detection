@@ -4,12 +4,12 @@ A web app to predict the flair for a reddit post using NLP based algorithms. The
 | Section | Description |
 |:-|:-:|
 | [Directory Structure](#directory) | View the file structure of the repository |
-| [Online demo](#demo) | Experiment with model's prediction capabilities |
+| [Online Demo](#demo) | Experiment with model's prediction capabilities |
 | [Automated Testing](#auto) | Automatically predict the flairs from collection of URLs |
 | [Installation](#installation) | How to install the package |
 | [Model Architectures](#model-architectures) | Architectures (with pretrained weights) |
 | [Data](#data) | Collection and cleaning of data |
-| [Performance](Performance) | Classification performance of different models used |
+| [Performance](#performance) | Classification performance of different models used |
 
 
 # Directory Structure
