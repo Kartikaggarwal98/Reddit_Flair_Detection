@@ -59,12 +59,27 @@ You will get a json response with urls as keys and predicted flairs as values.
 # Installation
 This repo is tested on Python 3.6+ on Unix/Linux System. You should use this repository in a virtual environment. If you're unfamiliar with Python virtual environments, check out the [user guide](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
-1. Run the following command to clone the repository: `git clone https://github.com/Kartikaggarwal98/Reddit_Flair_Detection`
-2. Move into cloned repo using: `cd Reddit_Flair_Detection/`
-2. To install a python3 virtual environment execute:  `virtualenv -p python3 env`
-3. Activate `env` by running: `source env/bin/activate`
-4. Now install the libraries: `pip install -r requirements.txt`
-5.To use the app run: `python app.py` and you can open localhost url which is displayed.
+1. Run the following command to clone the repository: 
+
+`git clone https://github.com/Kartikaggarwal98/Reddit_Flair_Detection`
+
+2. Move into cloned repo using: 
+
+`cd Reddit_Flair_Detection/`
+
+3. To install a python3 virtual environment execute:  
+
+`virtualenv -p python3 env`
+
+4. Activate `env` by running: 
+
+`source env/bin/activate`
+
+5. Now install the libraries: 
+
+`pip install -r requirements.txt`
+
+6. To use the app run: `python app.py` and you can open localhost url which is displayed.
 
 # Model Architectures
 The data was used on various archiectures such as SVM, Logistic Regression, Naive Bayes and also on recent language model based architectures such as ULMFit and BERT.
@@ -86,7 +101,7 @@ The details about the data collection can be found in [get_data.ipynb](https://g
 Further the data was saved in a csv file using pandas library.
 
 After collecting the data, Exploratory Data Analysis (EDA) was done in  order to obtain a clear understanding about the data. The complete analysis has been shown in [EDA_cleaned.ipynb]((https://github.com/Kartikaggarwal98/Reddit_Flair_Detection/notebooks/EDA_cleaned.ipynb)).
- 
+
 # Performance
 
 The performance on all the models was measured using weighted f1 metric as accuracy can be a misleading metric in unbalanced datasets. All models were trained using 3 types of text features:
